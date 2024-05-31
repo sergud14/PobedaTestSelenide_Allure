@@ -52,4 +52,13 @@ public class Tests {
         bookingManagementBlock.switchToNewTab();
         Assertions.assertTrue(bookingManagementBlock.verifyBookingErrorMessage());
     }
+
+    @Test
+    @Description("Явно непроходящий тест, чтобы увидеть в отчёте его падение")
+    @Feature(value ="Базовые проверки")
+    public void Test4() throws InterruptedException {
+        Selenide.open("https://www.ya.ru/");
+        StartPage startPage=new StartPage();
+        Assertions.assertTrue(startPage.verifySiteIsOpen());
+    }
 }
